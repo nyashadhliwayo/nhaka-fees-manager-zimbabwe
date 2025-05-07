@@ -53,6 +53,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Add custom colors for Nhaka design based on Akkhor mockup
+        akkhor: {
+          yellow: "#FFBA00",
+          blue: "#042954",
+          lightblue: "#2196F3",
+          lightgray: "#f5f7fa",
+          green: "#7FBA00",
+          red: "#FF5252",
+        },
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
