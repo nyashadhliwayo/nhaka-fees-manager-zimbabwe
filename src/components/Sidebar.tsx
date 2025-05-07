@@ -31,9 +31,14 @@ const Sidebar = () => {
       icon: <DollarSign className="h-5 w-5" />
     },
     {
+      title: 'All Students',
+      path: '/all-students',
+      icon: <Users className="h-5 w-5" />
+    },
+    {
       title: 'Student Payments',
       path: '/students',
-      icon: <Users className="h-5 w-5" />
+      icon: <DollarSign className="h-5 w-5" />
     },
     {
       title: 'Term Management',
