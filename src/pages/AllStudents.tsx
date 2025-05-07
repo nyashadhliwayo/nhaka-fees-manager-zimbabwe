@@ -19,6 +19,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Filter, Search } from "lucide-react";
+import { Link } from "react-router-dom";
 
 // Mock student data
 const students = [
@@ -154,7 +155,9 @@ const AllStudents = () => {
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-bold">All Students</h1>
           <Button variant="default" className="bg-akkhor-yellow text-akkhor-blue hover:bg-akkhor-yellow/90">
-            Add New Student
+            <Link to="/add-student" className="flex items-center">
+              Add New Student
+            </Link>
           </Button>
         </div>
 

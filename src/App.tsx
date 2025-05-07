@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import Dashboard from "./pages/Dashboard";
 import FeeStructure from "./pages/FeeStructure";
 import AllStudents from "./pages/AllStudents";
+import AddStudent from "./pages/AddStudent";
 import StudentPayment from "./pages/StudentPayment";
 import TermManagement from "./pages/TermManagement";
 import Reports from "./pages/Reports";
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/fees" element={<FeeStructure />} />
           <Route path="/all-students" element={<AllStudents />} />
+          <Route path="/add-student" element={<AddStudent />} />
           <Route path="/students" element={<StudentPayment />} />
           <Route path="/terms" element={<TermManagement />} />
           <Route path="/reports" element={<Reports />} />
