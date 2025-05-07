@@ -184,7 +184,7 @@ const AllStudents = () => {
                 <SelectValue placeholder="Class" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All Classes</SelectItem>
+                <SelectItem value="all-classes">All Classes</SelectItem>
                 {classes.map(cls => (
                   <SelectItem key={cls} value={cls}>Class {cls}</SelectItem>
                 ))}
@@ -197,7 +197,7 @@ const AllStudents = () => {
                 <SelectValue placeholder="Section" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All Sections</SelectItem>
+                <SelectItem value="all-sections">All Sections</SelectItem>
                 {sections.map(section => (
                   <SelectItem key={section} value={section}>Section {section}</SelectItem>
                 ))}
@@ -210,7 +210,7 @@ const AllStudents = () => {
                 <SelectValue placeholder="Payment Status" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All Statuses</SelectItem>
+                <SelectItem value="all-statuses">All Statuses</SelectItem>
                 <SelectItem value="Paid">Paid</SelectItem>
                 <SelectItem value="Partial">Partial</SelectItem>
                 <SelectItem value="Pending">Pending</SelectItem>
@@ -223,7 +223,7 @@ const AllStudents = () => {
                 <SelectValue placeholder="Arrears" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All Students</SelectItem>
+                <SelectItem value="all-arrears">All Students</SelectItem>
                 <SelectItem value="with">With Arrears</SelectItem>
                 <SelectItem value="without">No Arrears</SelectItem>
               </SelectContent>
