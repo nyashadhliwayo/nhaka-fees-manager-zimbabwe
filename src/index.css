@@ -1,101 +1,146 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
+    --background: 48 33% 97%;
+    --foreground: 20 14% 4%;
+    
+    --card: 48 33% 97%;
+    --card-foreground: 20 14% 4%;
+    
+    --popover: 48 33% 97%;
+    --popover-foreground: 20 14% 4%;
+    
+    --primary: 152 60% 25%;
+    --primary-foreground: 48 33% 97%;
+    
+    --secondary: 42 77% 60%;
+    --secondary-foreground: 20 14% 4%;
+    
+    --muted: 48 10% 90%;
+    --muted-foreground: 20 5% 40%;
+    
+    --accent: 42 77% 60%;
+    --accent-foreground: 20 14% 4%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 48 33% 97%;
+    
+    --border: 20 5% 85%;
+    --input: 20 5% 85%;
+    --ring: 152 60% 25%;
+    
     --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
-
-@layer base {
+  
   * {
     @apply border-border;
   }
-
+  
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-poppins;
+  }
+}
+
+@layer components {
+  .nhaka-card {
+    @apply bg-card rounded-lg shadow-md p-6 border border-border;
+  }
+  
+  .nhaka-table {
+    @apply w-full border-collapse;
+  }
+  
+  .nhaka-table th {
+    @apply bg-muted px-4 py-3 text-left font-semibold text-sm;
+  }
+  
+  .nhaka-table td {
+    @apply px-4 py-3 border-t border-border text-sm;
+  }
+  
+  .nhaka-table tr:hover {
+    @apply bg-muted/50;
+  }
+  
+  .nhaka-input {
+    @apply px-3 py-2 rounded-md border border-input bg-background w-full focus:outline-none focus:ring-2 focus:ring-ring;
+  }
+  
+  .nhaka-label {
+    @apply block text-sm font-medium mb-1;
+  }
+  
+  .nhaka-select {
+    @apply nhaka-input appearance-none bg-no-repeat bg-[right_0.5rem_center];
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-size: 1em;
+  }
+  
+  .nhaka-btn {
+    @apply rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-ring transition-colors px-4 py-2;
+  }
+  
+  .nhaka-btn-primary {
+    @apply nhaka-btn bg-primary text-primary-foreground hover:bg-primary/90;
+  }
+  
+  .nhaka-btn-secondary {
+    @apply nhaka-btn bg-secondary text-secondary-foreground hover:bg-secondary/90;
+  }
+  
+  .nhaka-btn-outline {
+    @apply nhaka-btn border border-input bg-background hover:bg-muted;
+  }
+  
+  .nhaka-badge {
+    @apply inline-flex items-center rounded-full px-2 py-1 text-xs font-medium;
+  }
+  
+  .nhaka-badge-green {
+    @apply nhaka-badge bg-green-100 text-green-800;
+  }
+  
+  .nhaka-badge-red {
+    @apply nhaka-badge bg-red-100 text-red-800;
+  }
+  
+  .nhaka-badge-blue {
+    @apply nhaka-badge bg-blue-100 text-blue-800;
+  }
+  
+  .nhaka-badge-yellow {
+    @apply nhaka-badge bg-yellow-100 text-yellow-800;
+  }
+  
+  .page-container {
+    @apply container mx-auto px-4 py-6;
+  }
+  
+  .section-title {
+    @apply text-2xl font-bold mb-6 border-b pb-2 border-muted;
+  }
+  
+  @media print {
+    .no-print {
+      @apply hidden;
+    }
+    
+    body {
+      @apply bg-white text-black m-0 p-0;
+    }
+    
+    .page-container {
+      @apply p-0 m-0 w-full;
+    }
+    
+    .nhaka-card {
+      @apply shadow-none border-none p-0;
+    }
   }
 }
